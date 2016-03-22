@@ -1,0 +1,15 @@
+@import "neat/neat-helpers";
+
+$grid-columns: 8; // Total number of columns in the grid
+$max-width: em(720); // Max-width of the outer container
+$border-box-sizing: true !default; // Makes all elements have a border-box layout
+$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+$default-layout-direction: LTR !default;
+
+
+
+// Neat Breakpoints
+///////////////////////////////////////////////////////////////////////////////
+
+$small-screen: new-breakpoint(max-width em(640) 8);
+$medium-screen: new-breakpoint(max-width em(720) 8);

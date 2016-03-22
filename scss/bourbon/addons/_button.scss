@@ -1,0 +1,143 @@
+@mixin button ($style: line, $base-color: $twitter) {
+
+  @if type-of($style) == color {
+    $base-color: $style;
+    $style: line;
+  }
+
+  // Grayscale button
+  @if $base-color == grayscale($base-color) {
+    
+    @if $style == line {
+      @include line($base-color, $grayscale: true);
+    }
+
+    @if $style == small {
+      @include small($base-color, $grayscale: true);
+    }
+  }
+
+  // Colored button
+  @else {
+    
+    @if $style == line {
+      @include line($base-color);
+    }
+
+    @else if $style == small {
+      @include small($base-color);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+
+// Line Button
+//************************************************************************//
+@mixin line($base-color, $grayscale: false) {
+  $color:         hsl(0, 0, 100%);
+  $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
+
+  @if lightness($base-color) > 70% {
+    $color:       hsl(0, 0, 20%);
+  }
+
+  @if $grayscale == true {
+    $border:        grayscale($border);
+  }
+
+  color: $base-color;
+  @include br($button-radius);
+  border: 1px solid $base-color;
+  display: block;
+  font-size: $fsp;
+  height: 48px;
+  line-height: 44px;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  background: none;
+  background-clip: padding-box;
+  @include transition(all .2s ease);
+
+  &:hover:not(:disabled) {
+    $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+
+    @if $grayscale == true {
+      $base-color-hover:    grayscale($base-color-hover);
+    }
+
+    cursor: pointer;
+    border-color: $base-color-hover;
+    color: $base-color-hover; 
+    @include transition(all .2s ease);
+  }
+
+  &:active:not(:disabled) {
+    $border-active:       adjust-color($base-color, $saturation: 9%, $lightness: -14%);
+
+    @if $grayscale == true {
+      $border-active:       grayscale($border-active);
+    }
+
+    border-color: $border-active;
+    color: $border-active;
+    @include transition(all .2s ease);
+  }
+}
+
+// Small Button
+//************************************************************************//
+@mixin small($base-color, $grayscale: false) {
+  $color:         hsl(0, 0, 100%);
+  $border:        adjust-color($base-color, $saturation:  9%,  $lightness: -14%);
+
+  @if lightness($base-color) > 70% {
+    $color:       hsl(0, 0, 20%);
+  }
+
+  @if $grayscale == true {
+    $border:        grayscale($border);
+  }
+
+  color: $base-color;
+  @include br($button-radius);
+  border: 1px solid $base-color;
+  display: inline-block;
+  font-size: .75rem;
+  height: $line-height;
+  line-height: 20px;
+  padding: 0 .5rem;
+  text-decoration: none;
+  background: none;
+  background-clip: padding-box;
+  @include transition(all .2s ease);
+
+  &:hover:not(:disabled) {
+    $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
+
+    @if $grayscale == true {
+      $base-color-hover:    grayscale($base-color-hover);
+    }
+
+    cursor: pointer;
+    border-color: $base-color-hover;
+    color: $base-color-hover; 
+    @include transition(all .2s ease);
+  }
+
+  &:active:not(:disabled) {
+    $border-active:       adjust-color($base-color, $saturation: 9%, $lightness: -14%);
+
+    @if $grayscale == true {
+      $border-active:       grayscale($border-active);
+    }
+
+    border-color: $border-active;
+    color: $border-active;
+    @include transition(all .2s ease);
+  }
+}

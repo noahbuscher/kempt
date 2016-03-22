@@ -1,0 +1,89 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+/* Colors
+   ========================================================================== */
+
+/* Don't use black */
+$black:  #222222;
+$white: #ffffff;
+
+/* Gray scale */
+
+$grey-light:  #f2f2f2;
+$grey-medium: #d2d2d2;
+$grey-dark:   #cfcfcf;
+
+
+/* Accent Colors */
+$accent: #4ad98f;
+$error: #ff3450;
+
+/* Social Colors */
+$twitter: #00acee;
+$instagram: #3f729b;
+$orange: #ee802f;
+
+
+/* Radii
+   ========================================================================== */
+   
+$button-radius: 2em;
+
+
+/* Typography
+   ========================================================================== */
+
+$body: "Soleil", "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
+$head: "Soleil", "Source Sans Pro", "Helvetica Neue", "Arial", sans-serif;
+
+   
+/* Type Scale
+   ========================================================================== */
+
+/** * 16 as roots then powers of two. */
+
+$fs1: 3em; // 48px
+$fs2: 2.25em; // 36px
+$fs3: 1.5em; // 24px
+$fs4: 1.3125em; // 21px
+$fs5: 1.125em; // 18px
+$fsp: 1em;
+$fs6: 1em;
+
+// Line Height
+
+$line-height: 24px;
+$line-height-small: 16px;
+
+
+/* Mixins
+   ========================================================================== */
+
+/* Vertically Align Magic */
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin br ($radius) {
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
+  @include border-left-radius($radius);
+  @include border-right-radius($radius);
+}
+
+// Mixin
+@mixin keyframes($name) {
+  @-moz-keyframes #{$name}    { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+  @-o-keyframes #{$name}      { @content; }
+  @-ms-keyframes #{$name}     { @content; }
+  @-khtml-keyframes #{$name}  { @content; }
+  @keyframes #{$name}         { @content; }
+}
+

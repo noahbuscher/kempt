@@ -1,0 +1,22 @@
+/*
+Theme Name: Kempt
+Theme URI: http://prettycommon.com
+Author: Pretty Common
+Author URI: http://prettycommon.com
+Description: Small, simple, and beautiful theme for WordPress.
+Version: 1.0
+Tags: green, simple, flat, beautiful, white, whitespace
+Text Domain: kempt
+*/
+
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+
+@import "normalize";
+@import "variables";
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "type";
+@import "styles";

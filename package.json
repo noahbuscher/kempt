@@ -1,0 +1,14 @@
+{
+  "name": "kempt",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-sass": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-cli": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-concat": "~0.4.0"
+  }
+}

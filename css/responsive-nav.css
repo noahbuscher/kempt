@@ -1,0 +1,239 @@
+/*! responsive-nav.js 1.0.25 by @viljamis */
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+/* Colors
+   ========================================================================== */
+/* Don't use black */
+/* Gray scale */
+/* Accent Colors */
+/* Social Colors */
+/* Radii
+   ========================================================================== */
+/* Typography
+   ========================================================================== */
+/* Type Scale
+   ========================================================================== */
+/** * 16 as roots then powers of two. */
+/* Mixins
+   ========================================================================== */
+/* Vertically Align Magic */
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@-ms-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@-khtml-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    bottom: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-o-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-ms-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-khtml-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -24px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header[role="main-header"] #toggle {
+    padding: .1em;
+    margin-bottom: .375em;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: right;
+    width: 100%;
+    display: block;
+    color: #4ad98f;
+  }
+  header[role="main-header"] #toggle.open a {
+    color: #ff3450;
+  }
+  header[role="main-header"] #toggle.closed a {
+    color: #4ad98f;
+  }
+
+  .js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  .nav-collapse.opened {
+    max-height: 9999px;
+  }
+
+  header[role="main-header"] .nav-collapse {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: white;
+  }
+  header[role="main-header"] .nav-collapse ul {
+    width: 100%;
+  }
+  header[role="main-header"] .nav-collapse ul li {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 1em;
+    width: 100%;
+  }
+  header[role="main-header"] .nav-collapse ul li a {
+    width: 100%;
+    padding: 0 40%;
+  }
+
+  .nav-collapse.disable-pointer-events {
+    pointer-events: none !important;
+  }
+
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .nav-collapse hgroup {
+    display: none;
+  }
+}
