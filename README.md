@@ -1,0 +1,2 @@
+# Kempt
+Fresh WordPress theme
